@@ -1,11 +1,11 @@
-name: Build Service Reporting
+name: Build & upload
 on:
   push:
     branches:
       - main
 jobs:
   service_reporting_build:
-    name: Build Service Reporting
+    name: Build & upload
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
