@@ -1,5 +1,4 @@
 const { load } = require("cheerio");
-const { DateTime } = require("luxon");
 const request = require("request");
 
 async function main(email, password) {
@@ -190,9 +189,6 @@ async function main(email, password) {
   return {
     ...baseline,
     date: parseInt(times[times.length - 1]),
-    dateFormatted: DateTime.fromMillis(parseInt(times[times.length - 1]))
-      .toUTC()
-      .toISO(),
   };
 }
 module.exports = main;
